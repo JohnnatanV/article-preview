@@ -27,7 +27,7 @@
     <title>Frontend Mentor | Article preview component</title>
   </head>
   <body>
-    <h1 class="sr-only">Article Previw Component</h1>
+    <h1 class="sr-only">Article Preview Component</h1>
     <main class="container">
       <img src="assets/images/drawers.jpg" alt="" class="main-img" />
       <div class="content">
@@ -51,14 +51,34 @@
             <p class="date">28 Jun 2020</p>
           </div>
           <button class="share" id="action">
-            <img src="assets/images/icon-share.svg" alt="" />
+            <img src="assets/images/icon-share.svg" alt="" id="share-active" />
           </button>
         </div>
-        <div class="contact" id="tooltip">
-          <p class="contact_title">Share</p>
-          <img src="assets/images/icon-facebook.svg" alt="" class="icon" />
-          <img src="assets/images/icon-twitter.svg" alt="" class="icon" />
-          <img src="assets/images/icon-pinterest.svg" alt="" class="icon" />
+        <div class="tooltip" id="tooltip">
+          <h2 class="tooltip_title">Share</h2>
+          <div class="tooltip_links">
+            <a
+              href="http://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/images/icon-facebook.svg" alt="" class="icon" />
+            </a>
+            <a
+              href="http://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/images/icon-twitter.svg" alt="" class="icon" />
+            </a>
+            <a
+              href="http://pinterest.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/images/icon-pinterest.svg" alt="" class="icon" />
+            </a>
+          </div>
         </div>
       </div>
     </main>

@@ -55,6 +55,7 @@ body {
 /* Content */
 
 .content {
+  /*! */
   position: relative;
   margin-top: -4rem;
   padding: 2.5rem 0;
@@ -73,7 +74,7 @@ body {
 }
 
 .aux-text {
-  color: var(--aux-text);
+  color: var(--block-text);
   margin-bottom: 1.5rem;
 }
 
@@ -121,23 +122,19 @@ body {
   padding-right: 2.5rem;
 }
 
-.contact {
+.tooltip {
   position: absolute;
   width: 100%;
   margin-top: 15%;
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding: 2rem;
   background-color: var(--main-text);
   transition: margin-top 0.3s ease-in;
 }
 
-.action {
-  margin-top: -15%;
-  transition: 0.3s ease-out;
-}
-
-.contact_title {
+.tooltip_title {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   color: var(--aux-text);
@@ -145,9 +142,23 @@ body {
 }
 
 .icon {
-  color: var(--background);
   margin-right: 1.5rem;
   cursor: pointer;
+}
+
+/* Event */
+
+.action {
+  margin-top: -15%;
+  transition: 0.3s ease-out;
+}
+
+.active {
+  background-color: var(--block-text);
+}
+
+.active img {
+  filter: brightness(0) invert(1);
 }
 
 /* FOOTER */
@@ -164,4 +175,72 @@ footer {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 960px) {
+  .container {
+    display: grid;
+    grid-template-columns: 0.5fr 0.65fr;
+    align-items: center;
+    max-width: 750px;
+    overflow: visible;
+  }
+
+  .main-img {
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .content {
+    height: 100%;
+    margin: 0;
+  }
+
+  .icon {
+    margin: auto;
+  }
+
+  /* Tooltip */
+
+  /* .toooltip {
+    position: relative;
+    display: inline-block;
+  } */
+
+  .tooltip {
+    position: absolute;
+    width: 60%;
+    margin: auto;
+    margin-top: -28%;
+    margin-left: 60%;
+    visibility: hidden;
+    border-radius: 1rem;
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in;
+  }
+
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 93%;
+    left: 46%;
+    height: 10px;
+    width: 10px;
+    background-color: var(--main-text);
+    transform: rotate(45deg);
+  }
+
+  .tooltip_links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .action {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-out;
+  }
 }
