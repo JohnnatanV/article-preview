@@ -23,6 +23,7 @@ Users should be able to:
 ### Screenshot
 
 ![Mobile](./screenshots/mobile.png)
+![Mobile2](./screenshots/mobile-active.png)
 ![desktop](./screenshots/desktop.png)
 
 ### Links
