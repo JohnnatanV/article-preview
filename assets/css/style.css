@@ -199,13 +199,6 @@ footer {
     margin: auto;
   }
 
-  /* Tooltip */
-
-  /* .toooltip {
-    position: relative;
-    display: inline-block;
-  } */
-
   .tooltip {
     position: absolute;
     width: 60%;
@@ -237,7 +230,7 @@ footer {
     justify-content: space-around;
   }
 
-  /* Show the tooltip text when you mouse over the tooltip container */
+  /* Show the tooltip content */
   .action {
     opacity: 1;
     visibility: visible;
