@@ -194,6 +194,14 @@ footer {
     border-radius: 1rem 0 0 1rem;
   }
 
+  .main-text p {
+    font-size: 1.25rem;
+  }
+
+  .aux-text p {
+    font-size: 1.02rem;
+  }
+
   .content {
     height: 100%;
     margin: 0;
